@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <!-- <video src="./nature.mp4" width="400" controls="on" autoplay="on" muted></video> -->
+    <!-- <ol type="a" start='20'>
+        <li>Vegetables</li>
+        <li>Fruits</li>
+        <li>Item 3</li>
+    </ol>
+
+    <ol type="i" start='20'>
+        <li>Vegetables</li>
+        <li>Fruits</li>
+        <li>Item 3</li>
+        <li>Last item</li>
+    </ol>
+
+    <ul>
+        <li>Vegetables</li>
+        <li>Fruits</li>
+        <li>Item 3</li>
+    </ul>
+
+
+    <ul type="circle">
+        <li>Vegetables</li>
+        <li>Fruits</li>
+        <li>Item 3</li>
+    </ul>
+
+    <ul  type="square">
+        <li>Vegetables</li>
+        <li>Fruits</li>
+        <li>Item 3</li>
+    </ul>
+
+    <dl>
+        <dt>Vegetables</dt>
+        <dd>Carrot, Cabbage, Potato, Onion</dd>
+
+        <dt>Fruits</dt>
+        <dd>Mango, Kiwi, Banana, Apple</dd>
+
+        <dt>Dummy</dt>
+        <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, quaerat.</dd>
+    </dl> -->
+
+    <!-- <ol>
+       <li>
+        <dl>
+            <dt>Shopping</dt>
+            <dd>
+                <ul>
+                    <li>Bag</li>
+                    <li>Daily needs</li>
+                    <li>Books</li>
+                    <li>Headphones</li>
+                </ul>
+            </dd>
+        </dl>
+       </li> 
+       <li>
+        <dt>Cleaning</dt>
+        <dd>
+            <ul>
+                <li>Clothes</li>
+                <li>Room</li>
+                <li>Cupboard</li>
+            </ul>
+        </dd>
+       </li> 
+    </ol> -->
+
+    <!-- <table border="1">
+        <caption>Students Data</caption>
+        <tr>
+            <th>Roll. No.</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>City</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td colspan="2">Likhilesh</td>
+            <td>Delhi</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Ashutosh</td>
+            <td>Singh</td>
+            <td rowspan="2">Mumbai</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Karan</td>
+            <td>Singh</td>
+        </tr>
+    </table> -->
+
+    <!-- default behavior of the form is to get submitted -->
+    <form action="./contact.html" method="GET">
+        <label for='eml'>First Name</label>
+        <input id='eml' type="text" placeholder="Enter First Name" name="userName"
+            pattern="[A-Za-z]{2}"
+            autocomplete="off"
+            required 
+        />
+        <br /><br />
+
+        <label>Friend Name</label>
+        <input type="text" placeholder="Enter friend Name" name="friendName"
+        />
+        <br /><br />
+        
+        <label>Age</label>
+        <input type="number" placeholder="Enter Age" name="age"
+            value="24"
+        />
+        <br /><br />
+
+        <label for="pss" >Password</label>
+        <input id="pss" type="password" placeholder="Enter Password" name="user-password" />
+        <br /><br />
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter Email" name="user-email" />
+        <br /><br />
+
+
+
+        <label>Gender:</label><br />
+
+        <label for="male">Male</label>
+        <input id='male' type="radio" name="gender" value="male">
+        <br />
+
+        <label for="fml">Female</label>
+        <input id='fml' type="radio" name="gender" value="female" checked>
+        <br /><br />
+
+
+        <label>Hobbies:</label><br />
+
+        <label>Walking</label>
+        <input type="checkbox" name="hobbies" value="Walking">
+        <br />
+
+        <label>Traveling</label>
+        <input type="checkbox" name="hobbies" value="traveling">
+        <br />
+
+        <label>Painting</label>
+        <input type="checkbox" name="hobbies" value="painting">
+        <br />
+        
+        <label>Web D</label>
+        <input type="checkbox" name="hobbies" value="web-d" checked>
+        <br /><br />
+
+        <label>City</label>
+        <select name="city" >
+            <option value="dl">Delhi</option>
+            <option value="mmb">Mumbai</option>
+            <option value="kkl">Kolkata</option>
+            <option value="jp">Jaipur</option>
+            <option value="Pune" selected>Pune</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Hyderabad">Hyderabad</option>
+        </select>
+        <br /><br />
+
+        <textarea rows="2" cols="40" placeholder="Please tell more..." name="description"></textarea>
+        <br /><br />
+
+
+
+
+
+
+
+
+
+        <button type="submit">Submit Info</button>
+        <button type="reset">Reset Info</button>
+        <br /><br />
+
+        <!-- <input type="submit" value="Submit Info"/>
+        <input type="reset" value="Reset Info"/> -->
+    </form>
+</body>
+</html>
