@@ -1,0 +1,183 @@
+/* h1{
+color: brown; 
+} */
+/* p{
+font-size: 20px;
+background-color: yellow;
+}
+.head-1{
+color: brown; 
+text-decoration: underline;
+}
+#para-1{
+color: green;
+}
+
+#js{
+background-color: aqua;
+} */
+/* .txt-red{
+color: red;
+background-color: aqua;
+}
+
+.bg-yellow{
+background-color: yellow;
+} */
+/* .c1{
+text-decoration: underline;
+background-color: aqua;
+}
+.c2{
+font-size: 24px;
+background-color: aquamarine;
+}
+.c1.c2{
+background-color: yellow;
+} */
+/* .p1{
+color: red;
+text-decoration: underline;
+}
+h2.p1{
+color: green;
+} */
+/* .parent1{
+margin: 24px;
+padding: 16px;
+border: 2px solid brown;
+background-color: yellow;
+width: 200px;
+
+box-sizing: content-box;
+}
+.parent2{
+margin: 24px;
+padding: 16px;
+border: 2px solid brown;
+background-color: yellow;
+width: 200px;
+
+box-sizing: border-box;
+}
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+} */
+/* *{
+color: brown;
+}
+h1{
+color: green;
+}
+.c1{
+color: blue;
+}
+#id{
+color: orange
+} */
+/* h2.c5{
+color: green;
+}
+.c5{
+color: brown;
+} */
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+    font-size: 20px;
+    background-color: blanchedalmond;
+}
+
+.child{
+    font-size: 2em;
+    height: 5em;
+    width: 10em;
+    background-color: yellow;
+} */
+
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+    font-size: 40px;
+    background-color: blanchedalmond;
+}
+
+.child{
+    font-size: 2rem;
+    height: 5rem;
+    width: 10rem;
+    background-color: yellow;
+} */
+
+/* .btn{
+    background-color: #04AA6D;
+    color: white;
+    font-size: 16px;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    border: none;
+}
+
+.btn-sm{
+    font-size: 12px;
+}
+
+.btn-lg{
+    font-size: 24px;
+}
+
+.btn-vlg{
+    font-size: 32px;
+} */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* .parent{
+    background-color: blanchedalmond;
+    padding: 16px;
+    width: 400px;
+    height: 200px;
+}
+
+.child{
+    background-color: lime;
+    padding: 16px;
+    width: 50%;
+    height: 100%;
+} */
+
+/* .parent{
+    background-color: blanchedalmond;
+    width: 400px;
+    height: 200px;
+}
+
+.child{
+    background-color: lime;
+    padding: 16px;
+    width: 100vw;
+    height: 50vh;
+}
+
+.scroll{
+    height: 2000px;
+} */
+
+
+
