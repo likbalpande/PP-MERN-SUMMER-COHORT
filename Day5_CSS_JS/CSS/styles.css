@@ -1,0 +1,226 @@
+/* .parent{
+    background-color: antiquewhite;
+    padding: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 24px;
+}
+
+.c1,.c2,.c3{
+    background-color: cadetblue;
+    height: 48px;
+    flex-basis: 100px;
+    flex-grow: 0;
+
+    transition: all 2000ms ease;
+}
+
+.c2:hover{
+    height: 200px;
+    flex-grow: 1;
+}
+
+.c2:active{
+    background-color: aqua;
+} */
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    padding: 50px;
+}
+
+.parent{
+    padding: 48px;
+    background-color: antiquewhite;
+    height: 500px;
+} */
+
+/* .c1{
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+
+    position: relative;
+    left: -10px;
+    top: 20px;
+
+    z-index: 1;
+}
+
+.c2{
+    background-color: chartreuse;
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+} */
+
+/* 
+.c1{
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    z-index: 1;
+}
+
+.c2{
+    background-color: chartreuse;
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+}
+
+.c3{
+    background-color: bisque;
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+}
+.c4{
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+    background-color: chocolate;
+} */
+/* 
+
+.c1{
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+
+    position: fixed;
+    right: 10px;
+    top: 10px;
+
+    z-index: 1;
+}
+
+.c2{
+    background-color: chartreuse;
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+}
+
+.c3{
+    background-color: bisque;
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+}
+.c4{
+    height: 100px;
+    width: 100px;
+    border: 1px solid grey;
+    background-color: chocolate;
+} */
+/* 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.parent{
+    padding: 48px;
+    background-color: antiquewhite;
+}
+
+.child{
+    height: 500px;
+    width: 400px;
+    border: 1px solid grey;
+}
+
+.c1{
+    background-color: aquamarine;
+}
+
+.c2{
+    background-color: chartreuse;
+}
+
+.c3{
+    background-color: bisque;
+}
+.c4{
+    background-color: chocolate;
+}
+
+.wheel{
+    background-color: crimson;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+
+    position: sticky;
+    top: 100px;
+} */
+
+
+/* .parent{
+    background-color: blueviolet;
+    padding: 12px;
+}
+
+.child{
+    background-color: chocolate;
+    width: 800px;
+    height: 200px;
+}
+
+@media ( 1000px < width <= 1200px){
+    .child{
+        width: 600px;
+        height: 100px;
+    }
+}
+
+@media (width <= 1000px){
+    .child{
+        width: 600px;
+        height: 50px;
+    }
+}
+
+@media (width <= 700px){
+    .child{
+        width: 200px;
+        height: 25px;
+    }
+} */
+
+/* #hello::after{
+    content: '*';
+    color: red;
+}
+
+#hello::first-letter{
+    font-size: 24px;
+    color: Blue;
+    text-decoration: underline;
+} */
+
+/*
+    1. background --> linear-gradient
+    2. img --> filter
+    3. calc(100% - 50px)
+    4. repeat(3, 100px)
+    5. some values --> inherit, important!, none, unset.
+*/
