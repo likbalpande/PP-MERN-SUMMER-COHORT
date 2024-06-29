@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    padding: 8px 16px;
+    background-color: burlywood;
+}
+
+.card{
+    width: 400px;
+    /* margin: 24px; // all four sides */
+    /* margin: 24px 48px; // top&bottom left&right*/
+    margin: 24px auto;
+    background-color: blanchedalmond;
+    border: 1px solid lightgrey;
+    padding: 16px;
+}
+
+ul{
+    padding-left: 32px
+}
