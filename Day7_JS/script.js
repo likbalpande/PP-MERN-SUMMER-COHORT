@@ -151,9 +151,49 @@
 
 // ----------------- DOM: querySelectorAll  : returns you the collection of all elements that match  --------------------------
 
-const card = document.querySelector(".card");
+// const card = document.querySelector(".card");
 
-const newHeading = document.createElement("h5");
-newHeading.innerText = "Please comment";
-card.appendChild(newHeading);
-// card.appendChild(newHeading); // appending twice won't work
+// const newHeading = document.createElement("h5");
+// newHeading.innerText = "Please comment";
+// card.appendChild(newHeading);
+// // card.appendChild(newHeading); // appending twice won't work
+
+// --------------------------functions old----------------------------------------
+
+// const ans2 = sum(10, 90);
+// console.log(ans2);
+
+// function sum(a, b) {
+//     return a + b;
+// }
+
+// const ans1 = sum(10, 90);
+// console.log(ans1);
+
+// function sum(a, b) {
+//     return a + b + 100;
+// }
+
+// const ans2 = sum(10, 90);
+// console.log(ans2);
+
+// --------------------- function assignment
+// const ans2 = sum(10, 90);
+// console.log(ans2);
+
+// const sum = function (a, b) {
+//     return a + b;
+// };
+
+// const sum = (a, b) => {
+//     return a + b;
+// };
+
+// short hand notation
+// const sum = (a, b) => a + b;
+
+const ans2 = sum(100, 90);
+console.log(ans2);
+
+// difference --> use of this keyword
+// difference --> there is a short hand for arrow function
