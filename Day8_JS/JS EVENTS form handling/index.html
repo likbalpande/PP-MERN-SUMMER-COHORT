@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <main>
+        <form onsubmit="handleSubmit(event)">
+            <div>
+                <label for="usn">Username</label>
+                <input id="usn" type="text" name="username" onchange="handleUsername(event)" minlength="3">
+            </div>
+            <div>
+                <label for="psd">Password</label>
+                <input id='psd' type="password" name="password">
+            </div>
+            <div>
+                <label for="eml">Email</label>
+                <input id='eml' type="email" name="email">
+            </div>
+            <button type="submit">Submit</button>
+            <p id="hello-text"></p>
+        </form>
+        <div id="info-card">
+
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
