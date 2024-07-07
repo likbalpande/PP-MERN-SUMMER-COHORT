@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    background-color: #E6F4EA;
+    height: 7vh;
+    width: 100%;
+}
+
+main{
+    min-height: 70vh;
+}
+
+.recipe-card{
+    padding: 12px;
+    max-width: 400px;
+    margin: 48px auto;
+    background-color: blanchedalmond;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+
+    img{
+        display: block;
+        height: 140px;
+        margin: 8px auto;
+        border-radius: 6px;
+    }
+}
