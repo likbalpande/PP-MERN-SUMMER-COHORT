@@ -1,0 +1,14 @@
+{
+  "name": "likhilesh-first-app",
+  "version": "0.1.0",
+  "description": "nothing",
+  "main": "myMathModule.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "figlet": "^1.7.0"
+  }
+}
