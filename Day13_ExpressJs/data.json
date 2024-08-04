@@ -1,0 +1,66 @@
+[
+    {
+        "name": "Mixed Fruit Juice",
+        "price": "159",
+        "size": "large",
+        "servings": 2,
+        "level": "easy",
+        "id": "1"
+    },
+    {
+        "name": "Pizza",
+        "price": "399",
+        "size": "large",
+        "servings": 3,
+        "level": "difficult",
+        "id": 5
+    },
+    {
+        "name": "Tacos",
+        "price": "299",
+        "size": "regular",
+        "servings": 3,
+        "level": "difficult",
+        "id": 6
+    },
+    {
+        "name": "Tacos",
+        "price": "299",
+        "size": "regular",
+        "servings": 3,
+        "level": "difficult",
+        "id": 7
+    },
+    {
+        "name": "Tacos",
+        "price": "299",
+        "size": "regular",
+        "servings": 3,
+        "level": "difficult",
+        "id": 8
+    },
+    {
+        "name": "Tacos",
+        "price": "299",
+        "size": "regular",
+        "servings": 3,
+        "level": "difficult",
+        "id": 9
+    },
+    {
+        "name": "Tacos",
+        "price": "299",
+        "size": "regular",
+        "servings": 3,
+        "level": "difficult",
+        "id": 10
+    },
+    {
+        "name": "Tacos",
+        "price": "299",
+        "size": "regular",
+        "servings": 3,
+        "level": "difficult",
+        "id": 11
+    }
+]
