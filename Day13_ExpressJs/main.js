@@ -1,3 +1,5 @@
+require("dotenv").config();
+require("./config/db.js");
 const express = require("express");
 const recipeRouter = require("./routes/recipeRoutes");
 const fsPromises = require("fs/promises");
@@ -20,5 +22,5 @@ app.get("/", (req, res) => {
 app.use("/recipes", recipeRouter);
 
 app.listen(1900, () => {
-    console.log("------------ App started ----------");
+    console.log("----------- App started --------------");
 });

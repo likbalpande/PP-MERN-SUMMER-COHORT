@@ -1,13 +1,12 @@
-const fsPromises = require("fs/promises");
+const RecipeModel = require("../models/recipe.js");
 
 const getAllRecipes = async (req, res) => {
     try {
-        const data = await fsPromises.readFile("./data.json", { encoding: "utf8" });
-        const arr = JSON.parse(data);
+        const recipes = await RecipeModel.find();
         res.json({
             status: "success",
             data: {
-                recipes: arr,
+                recipes,
             },
         });
     } catch (err) {
@@ -25,26 +24,23 @@ const getAllRecipes = async (req, res) => {
 const createRecipes = async (req, res) => {
     try {
         const data = req.body;
-
-        const oldRecipes = await fsPromises.readFile("./data.json", { encoding: "utf8" });
-        const oldRecipesArr = JSON.parse(oldRecipes);
-        const lastItemIndex = oldRecipesArr.length - 1;
-        if (lastItemIndex != -1) {
-            const lastItem = oldRecipesArr[lastItemIndex];
-            const lastItemId = lastItem.id;
-            data.id = lastItemId + 1;
-        } else {
-            data.id = 1;
+        let newRecipe;
+        try {
+            newRecipe = await RecipeModel.create(data);
+        } catch (err) {
+            res.status(400);
+            res.json({
+                status: "fail",
+                message: err._message,
+            });
+            return;
         }
 
-        oldRecipesArr.push(data);
-
-        await fsPromises.writeFile("./data.json", JSON.stringify(oldRecipesArr));
         res.status(201);
         res.json({
             status: "success",
             data: {
-                recipe: data,
+                recipe: newRecipe,
             },
         });
     } catch (err) {
@@ -59,22 +55,40 @@ const createRecipes = async (req, res) => {
     }
 };
 
-const removeRecipe = async (req, res) => {
+const validateRecipeId = async (req, res, next) => {
     try {
         const { recipeId } = req.params;
-        const oldRecipes = await fsPromises.readFile("./data.json", { encoding: "utf8" });
-        const oldRecipesArr = JSON.parse(oldRecipes);
-        const foundRecipeIndex = oldRecipesArr.findIndex((elem) => elem.id == recipeId);
-        if (foundRecipeIndex === -1) {
+
+        const isRecipePreset = await RecipeModel.findOne({ _id: recipeId });
+
+        if (!isRecipePreset) {
             res.status(400);
             res.json({
                 status: "fail",
-                message: "Invalid RecipeId",
+                message: "Invalid Recipe Id",
             });
             return;
         }
-        oldRecipesArr.splice(foundRecipeIndex, 1);
-        await fsPromises.writeFile("./data.json", JSON.stringify(oldRecipesArr));
+
+        next();
+    } catch (err) {
+        console.log("----------------------");
+        console.log(err);
+        console.log("----------------------");
+        res.status(400);
+        res.json({
+            status: "fail",
+            message: "Recipe Id is not of type Object Id",
+        });
+    }
+};
+
+const removeRecipe = async (req, res) => {
+    try {
+        const { recipeId } = req.params;
+
+        await RecipeModel.deleteOne({ _id: recipeId });
+
         res.status(204);
         res.json({
             status: "success",
@@ -97,27 +111,16 @@ const replaceRecipe = async (req, res) => {
         const data = req.body;
         const { recipeId } = req.params;
 
-        const oldRecipes = await fsPromises.readFile("./data.json", { encoding: "utf8" });
-        const oldRecipesArr = JSON.parse(oldRecipes);
-        const foundRecipeIndex = oldRecipesArr.findIndex((elem) => elem.id == recipeId);
-        if (foundRecipeIndex === -1) {
-            res.status(400);
-            res.json({
-                status: "fail",
-                message: "Invalid RecipeId",
-            });
-            return;
-        }
-        data.id = recipeId;
-        oldRecipesArr[foundRecipeIndex] = data;
+        const replacedRecipe = await RecipeModel.findOneAndReplace({ _id: recipeId }, data, {
+            returnDocument: "after",
+        });
 
-        await fsPromises.writeFile("./data.json", JSON.stringify(oldRecipesArr));
         res.status(200);
         res.json({
             status: "success",
             message: "Recipe replaced",
             data: {
-                recipe: data,
+                recipe: replacedRecipe,
             },
         });
     } catch (err) {
@@ -137,4 +140,5 @@ module.exports = {
     createRecipes,
     removeRecipe,
     replaceRecipe,
+    validateRecipeId,
 };
