@@ -5,6 +5,7 @@ const getAllRecipes = async (req, res) => {
         const recipes = await RecipeModel.find();
         res.json({
             status: "success",
+            results: recipes.length,
             data: {
                 recipes,
             },
@@ -135,10 +136,70 @@ const replaceRecipe = async (req, res) => {
     }
 };
 
+const listRecipes = async (req, res) => {
+    try {
+        // query generation
+        const {
+            page,
+            limit: limitValue = 4,
+            sort: sortValue = "price",
+            q = "",
+            select = "name price",
+            ...filters
+        } = req.query;
+
+        // applying filters / constraints
+        let query = RecipeModel.find(filters);
+
+        // search functionality
+        const matchString = new RegExp(q, "i");
+        query = query.where("name").regex(matchString);
+
+        // sort items (we will get the query as "a_b_c" and convert it to "a b c")
+        const sortParams = sortValue.split("_").join(" ");
+        query = query.sort(sortParams);
+
+        // count the number of total items that match the given format / filters / constraints
+        const queryClone = query.clone();
+        const totalItems = await queryClone.countDocuments();
+
+        // ignoring the items on earlier page
+        query = query.skip(limitValue * (page - 1));
+
+        // limit the number of items
+        query = query.limit(limitValue);
+
+        // specify the required or not-required items
+        const selectParams = select.split("_").join(" ");
+        query = query.select(selectParams);
+
+        const recipes = await query;
+
+        res.json({
+            status: "success",
+            results: recipes.length,
+            data: {
+                recipes,
+            },
+            total: totalItems,
+        });
+    } catch (err) {
+        console.log("----------------------");
+        console.log(err);
+        console.log("----------------------");
+        res.status(500);
+        res.json({
+            status: "fail",
+            message: "Internal Server Error",
+        });
+    }
+};
+
 module.exports = {
     getAllRecipes,
     createRecipes,
     removeRecipe,
     replaceRecipe,
     validateRecipeId,
+    listRecipes,
 };
