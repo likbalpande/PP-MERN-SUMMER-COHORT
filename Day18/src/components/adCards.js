@@ -1,3 +1,4 @@
+import AdCard from "./adCard";
 import "./adCards.css";
 
 const data = [
@@ -91,21 +92,7 @@ const AdCards = function () {
     return (
         <div className="ad-cards-container">
             {data.map((elem) => {
-                return (
-                    <div className="ad-card">
-                        <h4>{elem.title}</h4>
-                        <div className="ad-card-grid">
-                            {elem.cards.map((item) => {
-                                return (
-                                    <div className="ad-card-item">
-                                        <img src={item.imgUrl} />
-                                        <h6>{item.heading}</h6>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                );
+                return <AdCard adCard={elem} />;
             })}
         </div>
     );
