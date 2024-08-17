@@ -1,0 +1,18 @@
+.category-bar{
+    background-color: #222F3E;
+    color: white;
+
+    display: flex;
+    padding: 0 8px;
+
+    p{
+        padding: 8px;
+        border: 1px solid #222F3E;
+        cursor: pointer;
+        
+        &:hover{
+            border: 1px solid white;
+        }
+    }
+}
+

@@ -1,0 +1,24 @@
+.ad-cards-container{
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+
+    position: relative;
+    top: -300px;
+}
+
+.ad-card{
+    flex-basis: 25%;
+    background-color: #fff;   
+    padding: 16px;
+}
+.ad-card-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding-top: 16px;
+
+    img{
+        width: 100%;
+    }
+}

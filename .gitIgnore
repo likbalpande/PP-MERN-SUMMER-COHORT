@@ -3,3 +3,5 @@ nature.mp4
 node_modules
 .env
 my-server-logs.txt
+.parcel-cache
+dist

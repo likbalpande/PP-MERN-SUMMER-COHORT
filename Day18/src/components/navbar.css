@@ -1,0 +1,16 @@
+.navbar{
+    background-color: black;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+#amazon-logo{
+    background-image: url(https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-2x-reorg-privacy._CB600086755_.png);
+    background-size: 350px;
+    background-position: -10px -51px;
+    width: 97px;
+    height: 30px;
+}
