@@ -1,0 +1,11 @@
+.search-result-card-container{
+    margin-bottom: 24px;
+    border: 1px solid lightgrey;
+    min-height: 200px;
+}
+
+.result-img-container{
+    background-color: rgb(160, 171, 182);
+    width: 25vw;
+    height: 200px;
+}

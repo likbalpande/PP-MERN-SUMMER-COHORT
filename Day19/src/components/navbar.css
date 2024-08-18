@@ -1,0 +1,41 @@
+.navbar{
+    background-color: black;
+    color: white;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 16px;
+
+    input{
+        border: none;
+        outline: none;
+        padding: 8px 16px;
+        border-radius: 8px;
+    }
+
+    button#search{
+        background-color: #FEBD68;
+        padding: 8px;
+        border-radius: 8px;
+        border: none;
+        transition: all 300ms ease-in-out;
+        cursor: pointer;
+
+        &:hover{
+            background-color: #dfaf71;
+        }
+
+        &:active{
+            scale: 0.92;
+        }
+    }
+}
+
+#amazon-logo{
+    background-image: url(https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-2x-reorg-privacy._CB600086755_.png);
+    background-size: 350px;
+    background-position: -10px -51px;
+    width: 97px;
+    height: 30px;
+}
