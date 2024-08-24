@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import HomePage from "./src/pages/homepage.js";
 import SearchPage from "./src/pages/searchPage.js";
@@ -23,14 +23,18 @@ const categoriesList = [
 // SPA = Single Page Applications
 
 const App = () => {
+    let [searchText, setSearchText] = useState("Laptop");
+
     const appRouter = createBrowserRouter([
         {
             path: "/",
-            element: <HomePage categoriesList={categoriesList} />,
+            element: <HomePage categoriesList={categoriesList} searchText={searchText} setSearchText={setSearchText} />,
         },
         {
             path: "/search",
-            element: <SearchPage categoriesList={categoriesList} />,
+            element: (
+                <SearchPage categoriesList={categoriesList} searchText={searchText} setSearchText={setSearchText} />
+            ),
         },
     ]);
 
